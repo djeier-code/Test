@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firmenanalyse Dashboard</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>📊 Firmenanalyse Dashboard</h1>
+    <p class="sub">Firmenname eingeben, dann Analyse starten.</p>
+
+    <section class="search">
+      <input id="companyInput" placeholder="z. B. Mustermann GmbH, Berlin" />
+      <button id="analyzeBtn">Analyse</button>
+    </section>
+
+    <section id="status" class="status"></section>
+
+    <section id="cards" class="cards hidden">
+      <article class="card"><h3>Google Bewertung</h3><p id="googleRating">-</p></article>
+      <article class="card"><h3>Instagram Follower</h3><p id="igFollowers">-</p></article>
+      <article class="card"><h3>Facebook Follower</h3><p id="fbFollowers">-</p></article>
+      <article class="card"><h3>Backlinks</h3><p id="backlinks">-</p></article>
+    </section>
+
+    <section id="details" class="details hidden">
+      <div>
+        <h2>Backlink-Domains</h2>
+        <ul id="domains"></ul>
+      </div>
+      <div>
+        <h2>Potentielle Konkurrenz (50 km)</h2>
+        <ul id="competitors"></ul>
+      </div>
+    </section>
+
+    <section id="imagesSection" class="hidden">
+      <h2>Erste Bildtreffer</h2>
+      <div id="images" class="images"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
